@@ -1,0 +1,65 @@
+.expense {
+  background-color: rgb(85, 82, 82);
+  border-radius: 15px;
+  display: flex; /* establish flex container */
+  align-items: center;
+  flex-direction: row; /* default value; can be omitted */
+  flex-wrap: nowrap; /* default value; can be omitted */
+  width:60%;
+  margin: 5px 0px 5px 0px;
+}
+
+.expense h2{
+    font-size:xx-large;
+    margin-left:50px;
+    color: white;
+    text-align: center;
+}
+.expense_price{
+    width: 120px;
+    height:30px;
+    position:absolute;
+    right:42%;
+    font-size:x-large;
+    font-weight:bolder;
+    background-color: purple;
+    border:2px solid white;
+    border-radius: 10px;
+    text-align:center;
+    color: white;
+}
+<-----------------------expense-date------------->
+.expense_date{
+  width:100px;
+    margin: 5px 0 5px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding:10px;
+   background-color: black;
+}
+.expense_date_month,.expense_date_year,.expense_date_day{
+    color:white;
+  }
+.expense_date_day{
+  margin: 2px 0 2px 0;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align:center;
+}
+.expense_date_year{
+  font-size: small;
+  margin: 2px 0 2px 0;
+ text-align:center;
+ font-weight: bolder;
+}
+.expense_date_month{
+font-size:large;
+text-align:center;
+margin: 2px 0 2px 0;
+font-weight: bolder;
+}
+<--->
+font-size:large;
+  margin-left:50px;
+  color: white;
+  text-align: center;

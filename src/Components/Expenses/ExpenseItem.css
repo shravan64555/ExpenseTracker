@@ -1,0 +1,27 @@
+.expense{
+  background-color: gray;
+  border: 2px solid gray;
+  border-radius: 12px;
+  box-shadow: o 2px 8px black;
+  display:flex;
+  margin:10px;
+}
+.expense_title{
+  margin-left:20px;
+  color: white;
+
+}
+.expense_price{
+  background-color: purple;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  height:30px;
+  width: 70px;
+  font-weight:bolder;
+  font-size:large;
+  color:white;
+  margin: 18px 2px 5px 5px;
+  position: absolute;
+  right:33%;
+}

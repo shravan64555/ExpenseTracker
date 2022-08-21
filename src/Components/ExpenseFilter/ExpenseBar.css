@@ -1,0 +1,29 @@
+.expense_bar{
+    bottom:40%;
+    margin:10px;
+    height:150px;
+    background-color: gray;
+    width: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.expense_bar_fill{
+   
+    background-color:blueviolet;
+    border-radius: 12px;
+    transition: all 0.3s ease-out;
+    position:relative;
+}
+h4{
+    color:black;
+    font-weight:bold;
+    margin:0px;
+}
+expense_bar_label{
+    margin:0px;
+    position:absolute;
+    bottom:0%;
+}

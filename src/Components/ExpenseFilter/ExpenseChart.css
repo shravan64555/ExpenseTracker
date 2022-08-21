@@ -1,0 +1,16 @@
+.expense_chart{
+    background-color:lightpink;
+    height:200px;
+    border-radius:12px;
+    margin:5px;
+}
+.expense_chart_bar{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.expense_chart h4{
+    color:black;
+    font-weight:bold;
+    margin:0px;
+}

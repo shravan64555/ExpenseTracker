@@ -1,0 +1,15 @@
+.expense_filter{
+    display:flex;
+}
+.expense_filter h2{
+    color:white;
+    margin: 10px;
+}
+.expense_filter select{
+    margin: 8px 5px 0 260px;
+    height: 40px;
+    width: 80px;
+    font-size: larger;
+    font-weight:bolder;
+    text-align:center;
+}

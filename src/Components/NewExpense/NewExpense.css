@@ -1,0 +1,17 @@
+.new_Expense{
+    background-color:purple;
+    margin: 5px 30% 5px 30%;
+    padding:5px;
+}
+#addExpense{
+    background-color: lightsalmon;
+    height:50px;
+}
+.button1 {
+    background-color:black;
+    color:white;
+    border-radius:5px;
+    height:30px;
+    width: 100px;
+    margin-left:200px;
+}
