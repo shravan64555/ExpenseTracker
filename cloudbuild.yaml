@@ -4,30 +4,31 @@ steps:
     args: [
       'build',
       '-t',
-      'europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT',
+      'europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT:$SHORT_SHA',
       '.'
     ]
 
-  # Step 2: Push Docker Image
+  # Step 2: Push Docker Image to Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: [
       'push',
-      'europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT'
+      'europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT:$SHORT_SHA'
     ]
 
   # Step 3: Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args: [
       'gcloud', 'run', 'deploy', 'react-app',
-      '--image', 'europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT',
+      '--image', 'europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT:$SHORT_SHA',
       '--region', 'europe-west1',
       '--platform', 'managed',
       '--allow-unauthenticated'
     ]
 
 images:
-  - europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT
+  - europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT:$SHORT_SHA
 
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
   logging: CLOUD_LOGGING_ONLY
+  substitution_option: ALLOW_LOOSE
