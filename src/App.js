@@ -34,7 +34,6 @@ function App() {
   }
   return (
     <div className="App">
-    <p> Hi Checking clud build</p>
       <NewExpense onNewExpense={newExpenseHandler}></NewExpense>
       <Expenses expenses={expenses} />
     </div>
