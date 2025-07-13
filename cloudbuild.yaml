@@ -18,7 +18,7 @@ steps:
   # Step 3: Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args: [
-      'gcloud', 'run', 'deploy', 'react-app',
+      'gcloud', 'run', 'deploy', 'dev',
       '--image', 'europe-west1-docker.pkg.dev/$PROJECT_ID/react-app/$_ENVIRONMENT:$SHORT_SHA',
       '--region', 'europe-west1',
       '--platform', 'managed',
