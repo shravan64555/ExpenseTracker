@@ -32,6 +32,7 @@ function App() {
       return [expenseData,...prevExpense]
     })
   }
+  console.log(process.env.REACT_APP_TEST)
   return (
     <div className="App">
       <NewExpense onNewExpense={newExpenseHandler}></NewExpense>

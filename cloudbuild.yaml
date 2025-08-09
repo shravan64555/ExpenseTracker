@@ -1,4 +1,10 @@
 steps:
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud secrets versions access latest --secret=react-app-dev > .env
   # Step 1: Build Docker Image
   - name: 'gcr.io/cloud-builders/docker'
     args: [
